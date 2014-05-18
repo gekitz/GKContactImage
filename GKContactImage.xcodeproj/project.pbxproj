@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1B4AC1E1928D89000045CD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4AC1D1928D89000045CD3 /* Foundation.framework */; };
+		C1B4AC201928D89000045CD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4AC1F1928D89000045CD3 /* CoreGraphics.framework */; };
+		C1B4AC221928D89000045CD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4AC211928D89000045CD3 /* UIKit.framework */; };
+		C1B4AC281928D89000045CD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1B4AC261928D89000045CD3 /* InfoPlist.strings */; };
+		C1B4AC2A1928D89000045CD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B4AC291928D89000045CD3 /* main.m */; };
+		C1B4AC2E1928D89000045CD3 /* GKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B4AC2D1928D89000045CD3 /* GKAppDelegate.m */; };
+		C1B4AC311928D89000045CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B4AC2F1928D89000045CD3 /* Main.storyboard */; };
+		C1B4AC341928D89000045CD3 /* GKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B4AC331928D89000045CD3 /* GKViewController.m */; };
+		C1B4AC361928D89000045CD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B4AC351928D89000045CD3 /* Images.xcassets */; };
+		C1B4AC3D1928D89000045CD3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4AC3C1928D89000045CD3 /* XCTest.framework */; };
+		C1B4AC3E1928D89000045CD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4AC1D1928D89000045CD3 /* Foundation.framework */; };
+		C1B4AC3F1928D89000045CD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4AC211928D89000045CD3 /* UIKit.framework */; };
+		C1B4AC471928D89000045CD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1B4AC451928D89000045CD3 /* InfoPlist.strings */; };
+		C1B4AC491928D89000045CD3 /* GKContactImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B4AC481928D89000045CD3 /* GKContactImageTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1B4AC401928D89000045CD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1B4AC121928D89000045CD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1B4AC191928D89000045CD3;
+			remoteInfo = GKContactImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C1B4AC1A1928D89000045CD3 /* GKContactImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKContactImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B4AC1D1928D89000045CD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C1B4AC1F1928D89000045CD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C1B4AC211928D89000045CD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C1B4AC251928D89000045CD3 /* GKContactImage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GKContactImage-Info.plist"; sourceTree = "<group>"; };
+		C1B4AC271928D89000045CD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C1B4AC291928D89000045CD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C1B4AC2B1928D89000045CD3 /* GKContactImage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GKContactImage-Prefix.pch"; sourceTree = "<group>"; };
+		C1B4AC2C1928D89000045CD3 /* GKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKAppDelegate.h; sourceTree = "<group>"; };
+		C1B4AC2D1928D89000045CD3 /* GKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKAppDelegate.m; sourceTree = "<group>"; };
+		C1B4AC301928D89000045CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1B4AC321928D89000045CD3 /* GKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKViewController.h; sourceTree = "<group>"; };
+		C1B4AC331928D89000045CD3 /* GKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKViewController.m; sourceTree = "<group>"; };
+		C1B4AC351928D89000045CD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C1B4AC3B1928D89000045CD3 /* GKContactImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKContactImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B4AC3C1928D89000045CD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C1B4AC441928D89000045CD3 /* GKContactImageTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GKContactImageTests-Info.plist"; sourceTree = "<group>"; };
+		C1B4AC461928D89000045CD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C1B4AC481928D89000045CD3 /* GKContactImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKContactImageTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1B4AC171928D89000045CD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B4AC201928D89000045CD3 /* CoreGraphics.framework in Frameworks */,
+				C1B4AC221928D89000045CD3 /* UIKit.framework in Frameworks */,
+				C1B4AC1E1928D89000045CD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B4AC381928D89000045CD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B4AC3D1928D89000045CD3 /* XCTest.framework in Frameworks */,
+				C1B4AC3F1928D89000045CD3 /* UIKit.framework in Frameworks */,
+				C1B4AC3E1928D89000045CD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1B4AC111928D89000045CD3 = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC231928D89000045CD3 /* GKContactImage */,
+				C1B4AC421928D89000045CD3 /* GKContactImageTests */,
+				C1B4AC1C1928D89000045CD3 /* Frameworks */,
+				C1B4AC1B1928D89000045CD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1B4AC1B1928D89000045CD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC1A1928D89000045CD3 /* GKContactImage.app */,
+				C1B4AC3B1928D89000045CD3 /* GKContactImageTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1B4AC1C1928D89000045CD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC1D1928D89000045CD3 /* Foundation.framework */,
+				C1B4AC1F1928D89000045CD3 /* CoreGraphics.framework */,
+				C1B4AC211928D89000045CD3 /* UIKit.framework */,
+				C1B4AC3C1928D89000045CD3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1B4AC231928D89000045CD3 /* GKContactImage */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC2C1928D89000045CD3 /* GKAppDelegate.h */,
+				C1B4AC2D1928D89000045CD3 /* GKAppDelegate.m */,
+				C1B4AC2F1928D89000045CD3 /* Main.storyboard */,
+				C1B4AC321928D89000045CD3 /* GKViewController.h */,
+				C1B4AC331928D89000045CD3 /* GKViewController.m */,
+				C1B4AC351928D89000045CD3 /* Images.xcassets */,
+				C1B4AC241928D89000045CD3 /* Supporting Files */,
+			);
+			path = GKContactImage;
+			sourceTree = "<group>";
+		};
+		C1B4AC241928D89000045CD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC251928D89000045CD3 /* GKContactImage-Info.plist */,
+				C1B4AC261928D89000045CD3 /* InfoPlist.strings */,
+				C1B4AC291928D89000045CD3 /* main.m */,
+				C1B4AC2B1928D89000045CD3 /* GKContactImage-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1B4AC421928D89000045CD3 /* GKContactImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC481928D89000045CD3 /* GKContactImageTests.m */,
+				C1B4AC431928D89000045CD3 /* Supporting Files */,
+			);
+			path = GKContactImageTests;
+			sourceTree = "<group>";
+		};
+		C1B4AC431928D89000045CD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC441928D89000045CD3 /* GKContactImageTests-Info.plist */,
+				C1B4AC451928D89000045CD3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1B4AC191928D89000045CD3 /* GKContactImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1B4AC4C1928D89000045CD3 /* Build configuration list for PBXNativeTarget "GKContactImage" */;
+			buildPhases = (
+				C1B4AC161928D89000045CD3 /* Sources */,
+				C1B4AC171928D89000045CD3 /* Frameworks */,
+				C1B4AC181928D89000045CD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GKContactImage;
+			productName = GKContactImage;
+			productReference = C1B4AC1A1928D89000045CD3 /* GKContactImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1B4AC3A1928D89000045CD3 /* GKContactImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1B4AC4F1928D89000045CD3 /* Build configuration list for PBXNativeTarget "GKContactImageTests" */;
+			buildPhases = (
+				C1B4AC371928D89000045CD3 /* Sources */,
+				C1B4AC381928D89000045CD3 /* Frameworks */,
+				C1B4AC391928D89000045CD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1B4AC411928D89000045CD3 /* PBXTargetDependency */,
+			);
+			name = GKContactImageTests;
+			productName = GKContactImageTests;
+			productReference = C1B4AC3B1928D89000045CD3 /* GKContactImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1B4AC121928D89000045CD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GK;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Aurora Apps";
+				TargetAttributes = {
+					C1B4AC3A1928D89000045CD3 = {
+						TestTargetID = C1B4AC191928D89000045CD3;
+					};
+				};
+			};
+			buildConfigurationList = C1B4AC151928D89000045CD3 /* Build configuration list for PBXProject "GKContactImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1B4AC111928D89000045CD3;
+			productRefGroup = C1B4AC1B1928D89000045CD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1B4AC191928D89000045CD3 /* GKContactImage */,
+				C1B4AC3A1928D89000045CD3 /* GKContactImageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1B4AC181928D89000045CD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B4AC361928D89000045CD3 /* Images.xcassets in Resources */,
+				C1B4AC281928D89000045CD3 /* InfoPlist.strings in Resources */,
+				C1B4AC311928D89000045CD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B4AC391928D89000045CD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B4AC471928D89000045CD3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1B4AC161928D89000045CD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B4AC2E1928D89000045CD3 /* GKAppDelegate.m in Sources */,
+				C1B4AC341928D89000045CD3 /* GKViewController.m in Sources */,
+				C1B4AC2A1928D89000045CD3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B4AC371928D89000045CD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B4AC491928D89000045CD3 /* GKContactImageTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1B4AC411928D89000045CD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1B4AC191928D89000045CD3 /* GKContactImage */;
+			targetProxy = C1B4AC401928D89000045CD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1B4AC261928D89000045CD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1B4AC271928D89000045CD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C1B4AC2F1928D89000045CD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1B4AC301928D89000045CD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C1B4AC451928D89000045CD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1B4AC461928D89000045CD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1B4AC4A1928D89000045CD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C1B4AC4B1928D89000045CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1B4AC4D1928D89000045CD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GKContactImage/GKContactImage-Prefix.pch";
+				INFOPLIST_FILE = "GKContactImage/GKContactImage-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C1B4AC4E1928D89000045CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GKContactImage/GKContactImage-Prefix.pch";
+				INFOPLIST_FILE = "GKContactImage/GKContactImage-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C1B4AC501928D89000045CD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GKContactImage.app/GKContactImage";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GKContactImage/GKContactImage-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GKContactImageTests/GKContactImageTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C1B4AC511928D89000045CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GKContactImage.app/GKContactImage";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GKContactImage/GKContactImage-Prefix.pch";
+				INFOPLIST_FILE = "GKContactImageTests/GKContactImageTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1B4AC151928D89000045CD3 /* Build configuration list for PBXProject "GKContactImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B4AC4A1928D89000045CD3 /* Debug */,
+				C1B4AC4B1928D89000045CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1B4AC4C1928D89000045CD3 /* Build configuration list for PBXNativeTarget "GKContactImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B4AC4D1928D89000045CD3 /* Debug */,
+				C1B4AC4E1928D89000045CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C1B4AC4F1928D89000045CD3 /* Build configuration list for PBXNativeTarget "GKContactImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B4AC501928D89000045CD3 /* Debug */,
+				C1B4AC511928D89000045CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1B4AC121928D89000045CD3 /* Project object */;
+}
