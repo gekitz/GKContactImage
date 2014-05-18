@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GKViewController : UIViewController
-
+@property (nonatomic, assign) IBOutlet UIImageView *bigImageView;
+@property (nonatomic, assign) IBOutlet UIImageView *middleImageView;
+@property (nonatomic, assign) IBOutlet UIImageView *smallImageView;
 @end

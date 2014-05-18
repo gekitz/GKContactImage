@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B993FD85234CD92DF115341 /* UIImage+GKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B993E275AF392774E95A3DB /* UIImage+GKContact.m */; };
 		C1B4AC1E1928D89000045CD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4AC1D1928D89000045CD3 /* Foundation.framework */; };
 		C1B4AC201928D89000045CD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4AC1F1928D89000045CD3 /* CoreGraphics.framework */; };
 		C1B4AC221928D89000045CD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4AC211928D89000045CD3 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B993C7558A0B2F6E9D35EF5 /* UIImage+GKContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GKContact.h"; sourceTree = "<group>"; };
+		5B993E275AF392774E95A3DB /* UIImage+GKContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GKContact.m"; sourceTree = "<group>"; };
 		C1B4AC1A1928D89000045CD3 /* GKContactImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKContactImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B4AC1D1928D89000045CD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C1B4AC1F1928D89000045CD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B9933BACEE4683B665E416E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B993C7558A0B2F6E9D35EF5 /* UIImage+GKContact.h */,
+				5B993E275AF392774E95A3DB /* UIImage+GKContact.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		C1B4AC111928D89000045CD3 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 				C1B4AC421928D89000045CD3 /* GKContactImageTests */,
 				C1B4AC1C1928D89000045CD3 /* Frameworks */,
 				C1B4AC1B1928D89000045CD3 /* Products */,
+				5B9933BACEE4683B665E416E /* Classes */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +266,7 @@
 				C1B4AC2E1928D89000045CD3 /* GKAppDelegate.m in Sources */,
 				C1B4AC341928D89000045CD3 /* GKViewController.m in Sources */,
 				C1B4AC2A1928D89000045CD3 /* main.m in Sources */,
+				5B993FD85234CD92DF115341 /* UIImage+GKContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

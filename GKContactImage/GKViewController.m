@@ -7,6 +7,7 @@
 //
 
 #import "GKViewController.h"
+#import "UIImage+GKContact.h"
 
 @interface GKViewController ()
 
@@ -18,6 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    self.bigImageView.image = [UIImage imageForName:@"Georg Kitz" size:self.bigImageView.frame.size];
+    self.middleImageView.image = [UIImage imageForName:@"Georg Kitz" size:self.middleImageView.frame.size];
+    self.smallImageView.image = [UIImage imageForName:@"Georg Kitz" size:self.smallImageView.frame.size];
 }
 
 - (void)didReceiveMemoryWarning
