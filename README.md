@@ -6,14 +6,18 @@ Creates an avatar image like the iOS7 Contacts.app for a given name
 Install
 ==============
 
-`pod 'GKContactImage'`
+```ruby
+pod 'GKContactImage'
+```
 
 Usage
 ==============
 
 You simple use the category method with a given name and the size of the image you want to create.
 
-`self.bigImageView.image = [UIImage imageForName:@"Georg Kitz" size:self.bigImageView.frame.size];`
+```objc
+self.bigImageView.image = [UIImage imageForName:@"Georg Kitz" size:self.bigImageView.frame.size];
+```
 
 This would create the following image.
 
