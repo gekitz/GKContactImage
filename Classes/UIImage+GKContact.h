@@ -29,10 +29,6 @@
 *
 * @return An image with initials extracted from the given name.
 */
-+ (instancetype)imageForName:(NSString *)name
-                        size:(CGSize)size
-             backgroundColor:(UIColor *)backgroundColor
-                   textColor:(UIColor *)textColor
-                        font:(UIFont *)font;
++ (instancetype)imageForName:(NSString *)name size:(CGSize)size backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font;
 
 @end

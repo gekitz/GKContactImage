@@ -24,10 +24,8 @@ static inline NSString *GKInitials(NSString *name) {
     return initials;
 }
 
-static inline NSString *GKContactKey(NSString *initials, CGSize size,
-    UIColor *backgroundColor, UIColor *textColor, UIFont *font) {
-    return [NSString stringWithFormat:@"%@-%f-%f-%@-%@-%@",
-            initials, size.width, size.height, backgroundColor.description, textColor.description, font.description];
+static inline NSString *GKContactKey(NSString *initials, CGSize size, UIColor *backgroundColor, UIColor *textColor, UIFont *font) {
+    return [NSString stringWithFormat:@"%@-%f-%f-%@-%@-%@", initials, size.width, size.height, backgroundColor.description, textColor.description, font.description];
 }
 
 @implementation UIImage (GKContact)
@@ -57,13 +55,8 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size,
 #pragma mark -
 #pragma mark Image Drawing
 
-+ (UIImage *)drawImageForInitials:(NSString *)initials
-                             size:(CGSize)imageSize
-                  backgroundColor:(UIColor *)backgroundColor
-                        textColor:(UIColor *)textColor
-                             font:(UIFont *)font
++ (UIImage *)drawImageForInitials:(NSString *)initials size:(CGSize)imageSize backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font
 {
-
     CGFloat w = imageSize.width;
     CGFloat h = imageSize.height;
     CGFloat r = imageSize.width / 2;
@@ -107,29 +100,17 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size,
     CGFloat r = size.width / 2;
     UIFont *font = [UIFont systemFontOfSize:r - 1];
 
-    return [self imageForName:name
-                         size:size
-              backgroundColor:defaultBackgroundColor
-                    textColor:defaultTextColor
-                         font:font];
+    return [self imageForName:name  size:size backgroundColor:defaultBackgroundColor textColor:defaultTextColor font:font];
 }
 
-+ (instancetype)imageForName:(NSString *)name
-                        size:(CGSize)size
-             backgroundColor:(UIColor *)backgroundColor
-                   textColor:(UIColor *)textColor
-                        font:(UIFont *)font
++ (instancetype)imageForName:(NSString *)name size:(CGSize)size backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font
 {
     NSString *initials = GKInitials(name);
     NSString *key = GKContactKey(initials, size, backgroundColor, textColor, font);
 
     UIImage *image = [self imageForKey:key];
     if (!image) {
-        image = [self drawImageForInitials:initials
-                                      size:size
-                           backgroundColor:backgroundColor
-                                 textColor:textColor
-                                      font:font];
+        image = [self drawImageForInitials:initials size:size backgroundColor:backgroundColor textColor:textColor font:font];
         [self setImage:image forKey:key];
     }
 
