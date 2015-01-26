@@ -23,6 +23,13 @@ This would create the following image.
 
 ![Sample](https://raw.githubusercontent.com/gekitz/GKContactImage/master/Files/screen.png) 
 
+For a more customized image, use the extra category method with more options.
+
+```objc
+self.bigImageView.image = [UIImage imageForName:@"Georg Kitz" size:self.bigImageView.frame.size backgroundColor:[UIColor blackColor] textColor:[UIColor yellowColor] font:[UIFont systemFontOfSize:18.0]];
+```
+
+
 Author
 =============
 
