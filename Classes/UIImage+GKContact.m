@@ -24,8 +24,8 @@ static inline NSString *GKInitials(NSString *name) {
     return initials;
 }
 
-static inline NSString *GKContactKey(NSString *initials, CGSize size) {
-    return [NSString stringWithFormat:@"%@-%f-%f", initials, size.width, size.height];
+static inline NSString *GKContactKey(NSString *initials, CGSize size, UIColor *backgroundColor, UIColor *textColor, UIFont *font) {
+    return [NSString stringWithFormat:@"%@-%f-%f-%@-%@-%@", initials, size.width, size.height, backgroundColor.description, textColor.description, font.description];
 }
 
 @implementation UIImage (GKContact)
@@ -45,18 +45,18 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size) {
 }
 
 + (UIImage *)imageForKey:(NSString *)key {
-    return [self.cachedImages objectForKey:key];
+    return self.cachedImages[key];
 }
 
 + (void)setImage:(UIImage *)image forKey:(NSString *)key {
-    return [self.cachedImages setObject:image forKey:key];
+    self.cachedImages[key] = image;
 }
 
 #pragma mark -
 #pragma mark Image Drawing
 
-+ (UIImage *)drawImageForInitials:(NSString *)initials size:(CGSize)imageSize {
-
++ (UIImage *)drawImageForInitials:(NSString *)initials size:(CGSize)imageSize backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font
+{
     CGFloat w = imageSize.width;
     CGFloat h = imageSize.height;
     CGFloat r = imageSize.width / 2;
@@ -64,20 +64,18 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size) {
     UIGraphicsBeginImageContextWithOptions(imageSize, NO, [UIScreen mainScreen].scale);
 
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
-    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, backgroundColor.CGColor);
+    CGContextSetFillColorWithColor(context, backgroundColor.CGColor);
 
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, w, h)];
     [path addClip];
     [path setLineWidth:1.0f];
     [path stroke];
 
-    UIColor *color = [UIColor colorWithRed:0.784 green:0.776 blue:0.800 alpha:1];
-    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextSetFillColorWithColor(context, backgroundColor.CGColor);
     CGContextFillRect(context, CGRectMake(0, 0, w, h));
 
-    UIFont *font = [UIFont systemFontOfSize:r - 1];
-    NSDictionary *dict = @{NSFontAttributeName: font, NSForegroundColorAttributeName: [UIColor whiteColor]};
+    NSDictionary *dict = @{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor};
     CGSize textSize = [initials sizeWithAttributes:dict];
 
     [initials drawInRect:CGRectMake(r - textSize.width / 2, r - font.lineHeight / 2, w, h) withAttributes:dict];
@@ -94,12 +92,25 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size) {
 
 + (instancetype)imageForName:(NSString *)name size:(CGSize)size {
 
+    // Default colors.
+    UIColor *defaultBackgroundColor = [UIColor colorWithRed:0.784 green:0.776 blue:0.800 alpha:1];
+    UIColor *defaultTextColor = [UIColor whiteColor];
+
+    // Default font.
+    CGFloat r = size.width / 2;
+    UIFont *font = [UIFont systemFontOfSize:r - 1];
+
+    return [self imageForName:name  size:size backgroundColor:defaultBackgroundColor textColor:defaultTextColor font:font];
+}
+
++ (instancetype)imageForName:(NSString *)name size:(CGSize)size backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font
+{
     NSString *initials = GKInitials(name);
-    NSString *key = GKContactKey(initials, size);
+    NSString *key = GKContactKey(initials, size, backgroundColor, textColor, font);
 
     UIImage *image = [self imageForKey:key];
     if (!image) {
-        image = [self drawImageForInitials:initials size:size];
+        image = [self drawImageForInitials:initials size:size backgroundColor:backgroundColor textColor:textColor font:font];
         [self setImage:image forKey:key];
     }
 
