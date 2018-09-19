@@ -78,7 +78,8 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size, UIColor *b
     NSDictionary *dict = @{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor};
     CGSize textSize = [initials sizeWithAttributes:dict];
 
-    [initials drawInRect:CGRectMake(r - textSize.width / 2, r - font.lineHeight / 2, w, h) withAttributes:dict];
+    NSInteger xFactor = [UIApplication sharedApplication].userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft ? -1 : 1;
+    [initials drawInRect:CGRectMake(xFactor * (r - textSize.width / 2), r - font.lineHeight / 2, w, h) withAttributes:dict];
 
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 
