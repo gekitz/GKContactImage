@@ -1,7 +1,7 @@
-Pod::Spec.new do |s|
+Pod::Spec.new do ,s,
 
   s.name         = "GKContactImage"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "Contact avatar image like Contacts.app"
 
   s.description  = <<-DESC
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/gekitz/GKContactImage.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/gekitz/GKContactImage.git", :tag => "0.0.4" }
   s.source_files = "Classes", "Classes/**/*.{h,m}"
 
   s.requires_arc = true
