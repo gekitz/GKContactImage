@@ -14,7 +14,8 @@ static inline NSString *GKInitials(NSString *name) {
             return;
         }
 
-        [initials appendString:[part substringToIndex:1]];
+        NSUInteger end = [part rangeOfComposedCharacterSequenceAtIndex:0].length;
+        [initials appendString:[part substringToIndex:end]];
 
         if (idx == 1) {
             *stop = YES;
@@ -79,7 +80,7 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size, UIColor *b
     CGSize textSize = [initials sizeWithAttributes:dict];
 
     NSInteger xFactor = [UIApplication sharedApplication].userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft ? -1 : 1;
-    [initials drawInRect:CGRectMake(xFactor * (r - textSize.width / 2), r - font.lineHeight / 2, w, h) withAttributes:dict];
+    [initials drawInRect:CGRectMake(xFactor * (r - textSize.width / 2), r - font.lineHeight / 2, textSize.width, textSize.height) withAttributes:dict];
 
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 
