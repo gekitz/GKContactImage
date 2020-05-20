@@ -31,4 +31,18 @@
 */
 + (instancetype)imageForName:(NSString *)name size:(CGSize)size backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font;
 
+/**
+* @brief Creates an image with initials using the given name.
+*
+* @param name The name to extract initials from.
+* @param size The size of the image to be created.
+* @param backgroundColor The first color for the background gradient of the initials image.
+* @param backgroundGradientColor The second color for the background gradient of the initials image.
+* @param textColor The color to fill the initials with.
+* @param font The font to draw the initials with.
+*
+* @return An image with initials extracted from the given name.
+*/
++ (instancetype)imageForName:(NSString *)name size:(CGSize)size backgroundColor:(UIColor *)backgroundColor backgroundGradientColor:(UIColor *)backgroundGradientColor textColor:(UIColor *)textColor font:(UIFont *)font;
+
 @end

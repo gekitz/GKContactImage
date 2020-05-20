@@ -58,6 +58,11 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size, UIColor *b
 
 + (UIImage *)drawImageForInitials:(NSString *)initials size:(CGSize)imageSize backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font
 {
+    return [self drawImageForInitials:initials size:imageSize backgroundColor:backgroundColor backgroundGradientColor:nil textColor:textColor font:font];
+}
+
++ (UIImage *)drawImageForInitials:(NSString *)initials size:(CGSize)imageSize backgroundColor:(UIColor *)backgroundColor backgroundGradientColor:(UIColor *)backgroundGradientColor textColor:(UIColor *)textColor font:(UIFont *)font
+{
     CGFloat w = imageSize.width;
     CGFloat h = imageSize.height;
     CGFloat r = imageSize.width / 2;
@@ -72,10 +77,21 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size, UIColor *b
     [path addClip];
     [path setLineWidth:1.0f];
     [path stroke];
-
-    CGContextSetFillColorWithColor(context, backgroundColor.CGColor);
-    CGContextFillRect(context, CGRectMake(0, 0, w, h));
-
+    
+    if (backgroundGradientColor) {
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        CGFloat colorComponents[8]; // RGBA x 2
+        [backgroundColor getRed:&colorComponents[0] green:&colorComponents[1] blue:&colorComponents[2] alpha:&colorComponents[3]];
+        [backgroundGradientColor getRed:&colorComponents[4] green:&colorComponents[5] blue:&colorComponents[6] alpha:&colorComponents[7]];
+        CGGradientRef gradient = CGGradientCreateWithColorComponents(colorSpace, colorComponents, NULL, 2);
+        CGContextDrawLinearGradient(context, gradient, CGPointMake(0, h), CGPointMake(w, 0), 0);
+        CGGradientRelease(gradient);
+        CGColorSpaceRelease(colorSpace);
+    } else {
+        CGContextSetFillColorWithColor(context, backgroundColor.CGColor);
+        CGContextFillRect(context, CGRectMake(0, 0, w, h));
+    }
+    
     NSDictionary *dict = @{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor};
     CGSize textSize = [initials sizeWithAttributes:dict];
 
@@ -107,12 +123,17 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size, UIColor *b
 
 + (instancetype)imageForName:(NSString *)name size:(CGSize)size backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font
 {
+    return [self imageForName:name size:size backgroundColor:backgroundColor backgroundGradientColor:nil textColor:textColor font:font];
+}
+
++ (instancetype)imageForName:(NSString *)name size:(CGSize)size backgroundColor:(UIColor *)backgroundColor backgroundGradientColor:(UIColor *)backgroundGradientColor textColor:(UIColor *)textColor font:(UIFont *)font
+{
     NSString *initials = GKInitials(name);
     NSString *key = GKContactKey(initials, size, backgroundColor, textColor, font);
 
     UIImage *image = [self imageForKey:key];
     if (!image) {
-        image = [self drawImageForInitials:initials size:size backgroundColor:backgroundColor textColor:textColor font:font];
+        image = [self drawImageForInitials:initials size:size backgroundColor:backgroundColor backgroundGradientColor:backgroundGradientColor textColor:textColor font:font];
         [self setImage:image forKey:key];
     }
 
