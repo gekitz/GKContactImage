@@ -95,7 +95,16 @@ static inline NSString *GKContactKey(NSString *initials, CGSize size, UIColor *b
     NSDictionary *dict = @{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor};
     CGSize textSize = [initials sizeWithAttributes:dict];
 
-    NSInteger xFactor = [UIApplication sharedApplication].userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft ? -1 : 1;
+    BOOL isRTLLanguage;
+    if ([[[[NSBundle mainBundle] bundlePath] pathExtension] isEqualToString:@"appex"]) {
+        // App Extensions may not access -[UIApplication sharedApplication]; fall back to checking the bundle's preferred localization character direction
+        isRTLLanguage = [NSLocale characterDirectionForLanguage:[[NSBundle mainBundle] preferredLocalizations][0]] == NSLocaleLanguageDirectionRightToLeft;
+    } else {
+        // Use dynamic call to sharedApplication to workaround compilation error when building against app extensions
+        isRTLLanguage = [[UIApplication performSelector:@selector(sharedApplication)] userInterfaceLayoutDirection] == UIUserInterfaceLayoutDirectionRightToLeft;
+    }
+    
+    NSInteger xFactor = isRTLLanguage ? -1 : 1;
     [initials drawInRect:CGRectMake(xFactor * (r - textSize.width / 2), r - font.lineHeight / 2, textSize.width, textSize.height) withAttributes:dict];
 
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
